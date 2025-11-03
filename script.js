@@ -17,3 +17,14 @@ btn.addEventListener('click', ()=>{
     btn.textContent = 'Click me';
   }
 });
+
+// Breakpoint testing handler: clicking the button below will pause execution in DevTools
+const bpBtn = document.getElementById('breakpointBtn');
+if(bpBtn){
+  bpBtn.addEventListener('click', () => {
+    // Helpful console message and an intentional breakpoint for DevTools
+    console.log('Breakpoint button clicked — execution will pause on the next line (debugger).');
+    // Open DevTools → Sources to see the paused state
+    debugger;
+  });
+}
